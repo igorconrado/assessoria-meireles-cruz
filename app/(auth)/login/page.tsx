@@ -4,7 +4,7 @@ import { useEffect, useRef, useCallback } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { login } from './actions'
 import { Button, Input } from '@/components/ui'
-import { GeometricCanvas } from '@/components/ui/GeometricCanvas'
+import { AmbientCanvas } from '@/components/ui/AmbientCanvas'
 
 function SubmitButton() {
   const { pending } = useFormStatus()
@@ -72,13 +72,13 @@ function useParallax() {
       if (window.innerWidth <= 768) return
       const cx = window.innerWidth / 2
       const cy = window.innerHeight / 2
-      target.current.x = -((e.clientX - cx) / cx) * 12
-      target.current.y = -((e.clientY - cy) / cy) * 12
+      target.current.x = -((e.clientX - cx) / cx) * 10
+      target.current.y = -((e.clientY - cy) / cy) * 10
     }
 
     function animate() {
-      current.current.x = lerp(current.current.x, target.current.x, 0.02)
-      current.current.y = lerp(current.current.y, target.current.y, 0.02)
+      current.current.x = lerp(current.current.x, target.current.x, 0.03)
+      current.current.y = lerp(current.current.y, target.current.y, 0.03)
 
       if (el) {
         el.style.transform = `translate(${current.current.x}px, ${current.current.y}px)`
@@ -106,8 +106,8 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex">
       {/* Left column — visual branding (desktop only) */}
-      <div className="hidden lg:flex lg:w-1/2 bg-slate border-r border-gray-muted/10 relative overflow-hidden">
-        <GeometricCanvas />
+      <div className="hidden lg:flex lg:w-1/2 bg-navy relative overflow-hidden">
+        <AmbientCanvas />
 
         <div className="relative z-10 flex flex-col items-center justify-between w-full py-16 px-12">
           <div />

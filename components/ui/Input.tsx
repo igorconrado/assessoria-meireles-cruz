@@ -23,7 +23,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={id}
           className={cn(
-            'w-full bg-slate border border-gray-muted/20 rounded-lg px-4 py-2.5',
+            'w-full bg-slate/80 border border-gray-muted/30 rounded-lg px-4 py-2.5',
             'font-body text-sm text-ivory placeholder:text-gray-muted/50',
             'transition-all duration-300 ease-expo-out',
             'focus:outline-none focus:border-gold/60 focus:ring-1 focus:ring-gold/30',

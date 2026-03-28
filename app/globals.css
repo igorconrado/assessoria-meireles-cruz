@@ -41,3 +41,95 @@
   .stagger-4 { animation-delay: 300ms; }
   .stagger-5 { animation-delay: 400ms; }
 }
+
+/* Checkbox draw animation (mentoria) */
+@keyframes draw {
+  from { stroke-dashoffset: 20; }
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-draw {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 0;
+  animation: draw 0.3s ease-out forwards;
+}
+
+/* Modal entrance */
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-modal-in {
+  animation: modalIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Tiptap viewer */
+.tiptap-viewer .ProseMirror {
+  outline: none;
+}
+.tiptap-viewer .ProseMirror h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0D1B2A;
+  margin-bottom: 1rem;
+}
+.tiptap-viewer .ProseMirror h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #0D1B2A;
+  margin-bottom: 0.75rem;
+}
+.tiptap-viewer .ProseMirror h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #0D1B2A;
+  margin-bottom: 0.5rem;
+}
+.tiptap-viewer .ProseMirror p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #0D1B2A;
+  margin-bottom: 1rem;
+}
+.tiptap-viewer .ProseMirror ul,
+.tiptap-viewer .ProseMirror ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.tiptap-viewer .ProseMirror li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+.tiptap-viewer .ProseMirror strong {
+  font-weight: 600;
+  color: #0D1B2A;
+}
+.tiptap-viewer .ProseMirror blockquote {
+  border-left: 3px solid #C9A84C;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #94A3B8;
+  font-style: italic;
+}
+.tiptap-viewer .ProseMirror code {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background: rgba(13,27,42,0.06);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+.tiptap-viewer .ProseMirror pre {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background: #0D1B2A;
+  color: #F5F3EE;
+  padding: 1.25rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
